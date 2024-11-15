@@ -41,4 +41,10 @@ export class TasksComponent {
     // lets revist the filter method, how does the above line work?
   }
 // what if i wanted to make this an angular form
+
+  yearBorn(age: number): string {
+    const currentYear = new Date().getFullYear();
+    const birthYear = currentYear - age;
+    return `You were born in ${birthYear}`;
+  }
 }
